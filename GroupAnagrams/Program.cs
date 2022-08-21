@@ -38,6 +38,7 @@ namespace GroupAnagrams {
             Dictionary<string, List<string>> hMap = new Dictionary<string, List<string>>();
 
             foreach (var item in strs) {
+
                 var ordered = item.OrderBy(x => x).ToArray();
                 string key = new string(ordered);
 
@@ -68,15 +69,13 @@ namespace GroupAnagrams {
 
                 char[] arr = item.ToCharArray(); 
                 Array.Sort(arr);    
-                string current = new string(arr);
+                string key = new string(arr);
 
-
-                if (!hMap.ContainsKey(current)) {
-                    hMap[current] = new List<string>();
+                if (!hMap.ContainsKey(key)) {
+                    hMap[key] = new List<string>();
                 }
 
-                hMap[current].Add(item); // This means: "list.Add(item)"
-
+                hMap[key].Add(item); // This means: "list.Add(item)"
             }
 
             foreach (var item in hMap.Values) {
