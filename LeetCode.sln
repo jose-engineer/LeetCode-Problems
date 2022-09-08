@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidParentheses", "ValidPa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonotonicArray", "MonotonicArray\MonotonicArray.csproj", "{0BFCA63E-E32C-4E2B-87EF-15EF0DF51684}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupAnagrams", "GroupAnagrams\GroupAnagrams.csproj", "{BFDC2A1D-64CE-473F-9209-2E124EAAA849}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupAnagrams", "GroupAnagrams\GroupAnagrams.csproj", "{BFDC2A1D-64CE-473F-9209-2E124EAAA849}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinMovesToEqualArray2", "MinMovesToEqualArray2\MinMovesToEqualArray2.csproj", "{78BAF812-68EB-42FD-B358-AD151DBDFF55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{BFDC2A1D-64CE-473F-9209-2E124EAAA849}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFDC2A1D-64CE-473F-9209-2E124EAAA849}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFDC2A1D-64CE-473F-9209-2E124EAAA849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78BAF812-68EB-42FD-B358-AD151DBDFF55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78BAF812-68EB-42FD-B358-AD151DBDFF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78BAF812-68EB-42FD-B358-AD151DBDFF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78BAF812-68EB-42FD-B358-AD151DBDFF55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
