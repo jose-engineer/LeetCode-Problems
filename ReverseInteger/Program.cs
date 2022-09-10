@@ -52,7 +52,7 @@ namespace ReverseInteger
             return result;
         }
 
-        public static int Reverse2(int x) {
+        public static int Reverse(int x) {
             StringBuilder sb = new StringBuilder();
             string input = x.ToString();
 
@@ -63,9 +63,9 @@ namespace ReverseInteger
                     sb.Append(input[i].ToString());
             }
 
-            long total = Convert.ToInt64(sb.ToString());
+            long total = Int64.Parse(sb.ToString());
 
-            return Math.Abs(total) < 2147483647 ? (int)total : 0;
+            return Math.Abs(total) < Int32.MaxValue ? (int)total : 0;
         }
     }
 }
