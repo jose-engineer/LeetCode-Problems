@@ -51,5 +51,21 @@ namespace ReverseInteger
 
             return result;
         }
+
+        public static int Reverse2(int x) {
+            StringBuilder sb = new StringBuilder();
+            string input = x.ToString();
+
+            for (int i = input.Length - 1; i >= 0; i--) {
+                if (x < 0 && i == input.Length - 1)
+                    sb.Append('-').ToString();
+                if (char.IsDigit(input[i]))
+                    sb.Append(input[i].ToString());
+            }
+
+            long total = Convert.ToInt64(sb.ToString());
+
+            return Math.Abs(total) < 2147483647 ? (int)total : 0;
+        }
     }
 }
