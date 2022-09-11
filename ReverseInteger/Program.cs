@@ -33,15 +33,31 @@ namespace ReverseInteger
             Console.ReadKey();            
         }
 
-        static int Reverse(int x)
+        public int Reverse(int x) { //321
+            int end = 0, result = 0;
+
+            while (x != 0) {
+                if (Math.Abs(result) > Int32.MaxValue / 10) //compare the result before the last number is added with the MaxValue without last number
+                    return 0;
+
+                end = x % 10; //1
+                x = x / 10; //32 - so we get 32 in x for the next iteration
+                //result * 10 to add 0 at the end, to move the number to the right (on 120 we move to the right 12, so we can add 3 at the end
+                result = (result * 10) + end; //0*10 + 1 = 1, next iteration will be: 1*10 + 2 = 10 + 2 = 12, next: 12*10 + 3 = 120 + 3 = 123
+            }
+
+            return result;
+        }
+
+        static int Reverse2(int x)
         {
             int result = 0;
 
             while (x != 0) {
-                int tail = x % 10;
-                int newResult = result * 10 + tail;
-
-                if ((newResult - tail) / 10 != result) {
+                int end = x % 10;
+                int newResult = result * 10 + end;
+                //if 'newResult' in the line above return a out of range number(normally a number that not make sense) this condition will fail
+                if ((newResult - end) / 10 != result) { //(result * 10 + end) should be equal to ((newResult - end) / 10) if we are not out of range
                     return 0;
                 }
 
@@ -52,18 +68,44 @@ namespace ReverseInteger
             return result;
         }
 
-        public static int Reverse(int x) {
-            StringBuilder sb = new StringBuilder();
+        public static int Reverse3(int x) {
             string input = x.ToString();
+            StringBuilder sb = new StringBuilder();            
 
             for (int i = input.Length - 1; i >= 0; i--) {
                 if (x < 0 && i == input.Length - 1)
                     sb.Append('-').ToString();
+
                 if (char.IsDigit(input[i]))
                     sb.Append(input[i].ToString());
             }
 
             long total = Int64.Parse(sb.ToString());
+
+            return Math.Abs(total) < Int32.MaxValue ? (int)total : 0;
+        }
+
+        public static int Reverse4(int x) {
+            var sb = new StringBuilder();
+            string input = x.ToString();
+            Queue<char> queue = new Queue<char>();
+
+            for (int i = input.Length - 1; i >= 0; i--) {
+                queue.Enqueue(input[i]);
+            }
+
+            while (queue.Count > 0) {
+                if (x < 0 && queue.Count == input.Length)
+                    sb.Append('-').ToString();
+
+                if (char.IsDigit(queue.Peek())) {
+                    sb.Append(queue.Dequeue().ToString());
+                } else {
+                    queue.Dequeue().ToString(); //if not digit is the last character '-' so deque to make the ahile condition valid
+                }
+            }
+
+            var total = Int64.Parse(sb.ToString());
 
             return Math.Abs(total) < Int32.MaxValue ? (int)total : 0;
         }
