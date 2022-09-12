@@ -45,11 +45,11 @@ namespace TriangularSum {
 
             while (n > 0) {
                 for (int i = 1; i < nums.Length; i++) {
-                    sum = (nums[i - 1] + nums[i]) % 10;
+                    sum = (nums[i - 1] + nums[i]) % 10; //1 + 2 = 3 % 10 = 3 => 7 + 9 = 16 % 10 = 6
                     newNums[i - 1] = sum;
                 }
 
-                nums = newNums;
+                nums = newNums; //pass the new row([3, 5, 7, 9]) for the next iteration
                 n--;
             }
 

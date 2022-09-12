@@ -33,7 +33,7 @@ namespace ReverseInteger
             Console.ReadKey();            
         }
 
-        public int Reverse(int x) { //321
+        public static int Reverse(int x) { //321
             int end = 0, result = 0;
 
             while (x != 0) {

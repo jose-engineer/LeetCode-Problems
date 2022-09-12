@@ -68,16 +68,16 @@ namespace MakeBinaryAlternating {
             return Math.Min(helper(s, '1'), helper(s, '0')); // else if(zeros == ones){
         }
 
-        private static int helper(String s, char c) {
-            int swaps = 0;
-            foreach (var item in s) {
+        private static int helper(String binary, char c) {
+            int count = 0;
+            foreach (var item in binary) {
                 if (item != c) {
-                    ++swaps;
+                    count++;
                 }
                 c = c == '1' ? '0' : '1';
             }
 
-            return swaps / 2;
+            return count / 2;
         }
         
     }

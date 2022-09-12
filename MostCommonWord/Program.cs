@@ -47,7 +47,7 @@ namespace MostCommonWord {
 
             HashSet<string> hSet = new HashSet<string>();
             Dictionary<string, int> hMap = new Dictionary<string, int>();
-            string max = string.Empty;
+            string common = string.Empty;
 
             foreach (var item in banned) {
                 hSet.Add(item);
@@ -68,15 +68,15 @@ namespace MostCommonWord {
                         hMap[item] = 1;
                     }
 
-                    if (string.IsNullOrEmpty(max))  //max = max == string.Empty ? item : max;                                      
-                        max = item;                 //max = string.IsNullOrEmpty(max) ? item : max;                                                                                      
+                    if (string.IsNullOrEmpty(common))  //common = common == string.Empty ? item : common;                                      
+                        common = item;                 //common = string.IsNullOrEmpty(common) ? item : common;                                                                                      
 
-                    if (hMap[item] > hMap[max])
-                        max = item;                    
+                    if (hMap[item] > hMap[common])
+                        common = item;                    
                 }
             }
 
-            return max;
+            return common;
         }
 
         public static string MostCommonWord2(string paragraph, string[] banned) {
