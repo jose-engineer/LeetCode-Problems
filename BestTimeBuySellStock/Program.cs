@@ -67,6 +67,7 @@ namespace BestTimeBuySellStock {
             int maxProfit = 0;
 
             while (end < prices.Length) {
+
                 if (prices[start] < prices[end]) {
                     int profit = prices[end] - prices[start];
                     maxProfit = Math.Max(maxProfit, profit);
