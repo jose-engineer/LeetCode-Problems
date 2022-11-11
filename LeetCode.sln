@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31727.386
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSum", "LeetCode\TwoSum.csproj", "{22B75E52-895E-4E0A-ADF7-EC7C7A573AAC}"
 EndProject
@@ -39,7 +39,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonotonicArray", "Monotonic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupAnagrams", "GroupAnagrams\GroupAnagrams.csproj", "{BFDC2A1D-64CE-473F-9209-2E124EAAA849}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinMovesToEqualArray2", "MinMovesToEqualArray2\MinMovesToEqualArray2.csproj", "{78BAF812-68EB-42FD-B358-AD151DBDFF55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinMovesToEqualArray2", "MinMovesToEqualArray2\MinMovesToEqualArray2.csproj", "{78BAF812-68EB-42FD-B358-AD151DBDFF55}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FibonacciNumber", "FibonacciNumber\FibonacciNumber.csproj", "{32EA744F-4E83-441C-A70A-D7603F25C831}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestTimeBuySellStock", "BestTimeBuySellStock\BestTimeBuySellStock.csproj", "{02778A49-9738-4ED5-B562-8D8A34C5F68C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +127,14 @@ Global
 		{78BAF812-68EB-42FD-B358-AD151DBDFF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78BAF812-68EB-42FD-B358-AD151DBDFF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78BAF812-68EB-42FD-B358-AD151DBDFF55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32EA744F-4E83-441C-A70A-D7603F25C831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32EA744F-4E83-441C-A70A-D7603F25C831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32EA744F-4E83-441C-A70A-D7603F25C831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32EA744F-4E83-441C-A70A-D7603F25C831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02778A49-9738-4ED5-B562-8D8A34C5F68C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02778A49-9738-4ED5-B562-8D8A34C5F68C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02778A49-9738-4ED5-B562-8D8A34C5F68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02778A49-9738-4ED5-B562-8D8A34C5F68C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
